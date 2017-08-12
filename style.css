@@ -1,5 +1,6 @@
 *{
 	margin:0;
+	overflow: hidden;
 }
 
 
@@ -41,6 +42,46 @@ footer{
 	height:100vh
 }
 
+.facebook{
+	position:absolute;
+	width:300px;
+	height:300px;
+	right:-250px;
+	background-color: aqua;
+}
+
+.facebookContent{
+	margin-left:50px;
+	display: block;
+}
+
+
+.facebookTitle{
+	position: absolute;
+	height:300px;
+	width:50px;
+	background-color: white;
+
+}
+
+.facebook:hover{
+	right:0;
+	animation-name: asideHover;
+	animation-duration: 2s;
+
+	animation-fill-mode: forwards;
+}
+
+@keyframes asideHover{
+	0%{
+	    right:-250px;
+	}
+	100%{
+		right:0;
+	}
+}
+
+
 @media (max-width:500px){
 	
 	nav{
@@ -53,6 +94,7 @@ footer{
 	article{
 		display:grid;
 		grid-template-rows: repeat(2, 1fr);
+		padding:10px
 	}
 
 }
